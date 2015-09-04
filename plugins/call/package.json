@@ -1,0 +1,13 @@
+{
+    "name": "call",
+    "version": "1.0.0",
+    "description": "Place calls right from Spotlight",
+    "author": { "name": "George Lydakis", "url": "http://www.ldkge.com" },
+    "limelight": {
+        "main": "plugin.py",
+    	"displayName": "Call",
+    	"description": "Place calls right from Spotlight",
+    	"categories": ["Utilities", "Featured"],
+    	"examples": ["call 2610333366", "facetime Nate", "call James work"]
+    }
+}

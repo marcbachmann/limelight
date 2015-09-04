@@ -1,0 +1,18 @@
+{
+  "name": "dark-mode",
+  "version": "1.0.0",
+  "description": "Toggle Mac OS Dark mode",
+  "author": { "name": "Marc Bachmann" },
+  "os": ["darwin"],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/marcbachmann/dark-mode"
+  },
+  "limelight": {
+    "main": "plugin.js",
+    "displayName": "Dark Mode Toggle",
+    "description": "Toggle the Mac OS Dark mode",
+    "categories": ["Utilities", "Featured"],
+    "examples": ["dark mode", "toggle dark mode"]
+  }
+}

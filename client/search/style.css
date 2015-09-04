@@ -1,0 +1,177 @@
+html, body {
+	overflow: hidden;
+}
+
+.search, .list {
+ 	-webkit-user-select: none;
+}
+
+.search {
+	padding: 7px 16px;
+	height: 58px;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+.appearance-light .search {
+	background: rgb(242, 241, 241)!important;
+}
+
+.appearance-dark .search {
+	background: rgb(77, 71, 70)!important;
+	color: rgb(255,255,255);
+	border-bottom: 1px solid rgb(85, 80, 80);
+}
+
+.appearance-light .search .icon {
+	color: #777;
+}
+
+.appearance-dark .search .icon {
+	color: #777;
+}
+
+.search input {
+	position: absolute;
+	background: transparent!important;
+	border: 0!important;
+	font-size: 26px;
+	font-weight: 300;
+  	line-height: 1.2em;
+	top: 10px;
+	left: 36px;
+	width: 610px;
+    overflow: hidden!important;
+	white-space: nowrap;
+}
+
+input::-webkit-input-placeholder {
+  line-height: 1.2em;
+}
+
+.search .placeholder {
+	font-size: 26px;
+	font-weight: 300;
+	line-height: 1.2em;
+	top: 10px;
+	left: 36px;
+	padding: 6px;
+	width: 610px;
+	color: transparent;
+    overflow: hidden;
+	white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.search .suggestion {
+	display: inline-block;
+	font-size: 16px!important;
+}
+
+.appearance-light .search .suggestion {
+	color: #888;
+}
+
+.appearance-dark .search .suggestion {
+	color: #666;
+}
+
+
+.list {
+	position: absolute;
+	left: 0;
+	top: 57px;
+	bottom: 0;
+	width: 290px;
+	border-right: 1px solid #CCC;
+}
+
+.table-view {
+	border-top: 0px;
+    border-bottom: 0px;
+}
+
+.list .content>.table-view:first-child {
+	margin-top: 0;
+}
+
+.table-view-cell {
+	font-size: 13px;
+	padding: 6px 10px 6px 44px;
+	white-space: nowrap;
+    overflow: hidden!important;
+    text-overflow: ellipsis;
+}
+
+.table-view-cell small {
+	font-size: 11px;
+	margin-left: 10px;
+}
+
+
+.appearance-dark .list .content {
+	background: rgb(70, 70, 70);
+}
+
+.appearance-dark .table-view {
+	background: rgb(70, 70, 70);
+}
+
+.appearance-dark .table-view-cell {
+	color: #FFF;
+	border-color: rgb(70, 70, 70);
+	border: 1px 0 1px 0;
+}
+
+.appearance-dark .table-view-divider {
+	background: rgb(90,90,90);
+}
+
+.appearance-light .table-view-cell small {
+	color: #888;
+}
+
+.appearance-dark .table-view-cell small {
+	color: #666;
+}
+
+
+.table-view-cell .icon {
+	position: absolute;
+	left: 14px;
+	width: 16px;
+	height: 16px;
+}
+
+.table-view-cell--highlight {
+	background: rgb(25, 115, 238);
+}
+
+.table-view-cell--highlight, .table-view-cell--highlight small {
+	color: #FFF;
+}
+
+
+.view {
+	position: absolute;
+	left: 290px;
+	top: 58px;
+	bottom: 0;
+	right: 0;
+}
+
+.view webview {
+	position: absolute;
+	left: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.appearance-light .view {
+	background: white;
+}
+
+.appearance-dark .view {
+	background: rgb(77, 71, 70);
+}

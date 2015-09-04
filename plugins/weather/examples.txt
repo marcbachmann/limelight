@@ -1,0 +1,6 @@
+weather in ~location(new york)
+weather ~location(query)
+weather ~location(query) time/now(now)
+how's the weather in ~location(queens)?
+how's the weather in ~location(queens) time/now(now)?
+forecast for ~location(the bronx)

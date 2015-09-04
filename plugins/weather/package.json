@@ -1,0 +1,10 @@
+{
+	"name": "weather",
+	"displayName": "Weather",
+	"limelight": {
+		"main": "plugin.py",
+		"description": "Updated weather plugin with both days and hour-by-hour forcast.",
+		"examples": ["weather bristol,us", "how's the weather in Bristol,US?"],
+		"categories": ["Weather", "Featured"]
+	}
+}

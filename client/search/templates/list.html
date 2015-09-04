@@ -1,0 +1,19 @@
+<div class="content">
+  <ul class="table-view">
+    <div each="{ groups }" if="{ this.children.length }">
+        <li class="table-view-cell table-view-divider">
+            { this.name }
+        </li>
+        <li each="{ this.children }"
+            ondblclick="{this.parent.onItemDoubleClick}"
+            onclick="{this.parent.onItemClick}"
+            class="table-view-cell { 'table-view-cell--highlight': this.highlighted }">
+            <img if="{ this.icon }" class="icon" src="{ this.icon }">
+            { this.name }
+            <small if="{ this.description }">
+                { this.description }
+            </small>
+        </li>
+    </div>
+  </ul>
+</div>

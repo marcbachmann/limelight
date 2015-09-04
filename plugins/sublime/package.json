@@ -1,0 +1,19 @@
+{
+  "name": "sublime",
+  "version": "1.0.0",
+  "limelight": {
+    "main": "plugin.py",
+    "displayName": "Open with Sublime Text",
+    "displayName_de": "Sublime Text",
+    "description": "Open Sublime Text Finder is open, opens the current folder/file in Sublime Text.",
+    "description_de": "Öffne Sublime Text. Der Pfad vom offenen Finder Fenster wird in Sublime Text geöffnet.",
+    "examples": [
+      "sublime",
+      "sublime desktop",
+      "subl desktop"
+    ],
+    "categories": [
+      "Developer"
+    ]
+  }
+}

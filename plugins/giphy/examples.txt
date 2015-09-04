@@ -1,0 +1,3 @@
+giphy ~query(dancing burrito)
+gif ~query(cats)
+gifs of ~query(dancing bill gates)

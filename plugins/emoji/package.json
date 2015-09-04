@@ -1,0 +1,19 @@
+{
+  "name": "emoji",
+  "version": "1.0.0",
+  "description": "Search and copy emoji.",
+  "author": { "name": "Marc Bachmann" },
+  "os": ["darwin"],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/marcbachmann/flashlight-emoji"
+  },
+  "limelight": {
+    "main": "plugin.py",
+    "displayName": "Emoji",
+    "description": "Search and copy emoji.",
+    "icon": "Icon.png",
+    "categories": ["Utilities", "Featured"],
+    "examples": ["emoji grin", "heart emoji", ":rocket:"]
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "name": "limelight",
+  "main": "index.js",
+  "version": "0.0.0",
+  "authors": [
+    "Marc Bachmann <marc.brookman@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "ratchet": "~2.0.2"
+  }
+}

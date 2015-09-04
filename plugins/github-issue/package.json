@@ -1,0 +1,14 @@
+{
+    "version": "1.0.0",
+    "name": "github-issue",
+    "creator_name": "Marc Bachmann",
+    "creator_url": "https://github.com/marcbachmann/flashlight-github-issue",
+    "description": "Create an Issue on Github using Spotlight",
+    "limelight": {
+    	"main": "plugin.py",
+	    "displayName": "Github Issue",
+	    "examples": ["ghi organisation/repo awesome issue title labels=bug"],
+	    "categories": ["Developer"],
+	    "openPreferencesOnInstall": true
+	}
+}

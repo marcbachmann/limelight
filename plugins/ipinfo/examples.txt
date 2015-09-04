@@ -1,0 +1,4 @@
+ipinfo ~ip(8.8.8.8)
+ip ~ip(8.8.8.8)
+ip
+ipinfo

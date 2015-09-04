@@ -1,0 +1,18 @@
+{
+  "name": "contacts",
+  "version": "1.0.0",
+  "description": "Contact search",
+  "author": { "name": "Marc Bachmann" },
+  "os": ["darwin"],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/marcbachmann/flashlight-contacts"
+  },
+  "limelight": {
+    "main": "plugin.js",
+    "displayName": "Contacts",
+    "description": "Search your contacts",
+    "categories": ["Utilities", "Featured"],
+    "examples": ["Marc Bachmann", "contact Marc Bachmann"]
+  }
+}

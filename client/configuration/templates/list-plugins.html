@@ -1,0 +1,17 @@
+<div class="header">
+  <h1>Installed Plugins</h1>
+</div>
+<div class="list">
+	<div class="content">
+	  <ul class="table-view">
+	    <li class="table-view-cell" each="{ plugins }" onclick="{goto}">
+	        { this.displayName }
+	        <span if="{ this.description }">
+	        	- { this.description }
+	        </span>
+	    </li>
+	  </ul>
+	</div>
+</div>
+
+

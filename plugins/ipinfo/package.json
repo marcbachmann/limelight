@@ -1,0 +1,12 @@
+{
+	"name": "ipinfo",
+	"version": "1.0.0",
+	"limelight": {
+        "main": "plugin.py",
+		"displayName": "IP Info",
+		"description": "Lookup IP info",
+		"description_de": "IP infos Abfragen",
+		"examples": ["ipinfo 8.8.8.8"],
+	    "categories": ["Search", "Information", "Utilities"]
+	}
+}

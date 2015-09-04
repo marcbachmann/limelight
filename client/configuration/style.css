@@ -1,0 +1,30 @@
+body {
+	position: relative!important;
+    font: 400 14px/1.5 "Open Sans",sans-serif;
+    color: #333;
+    -webkit-text-size-adjust: 100%;
+    background-color: #fff;
+    -webkit-font-smoothing: antialiased;
+}
+
+.header {
+	position: relative;
+    /*height: 150px;*/
+	background-color: #0a1855;
+	background-image: linear-gradient(45deg,#0a1855 0,#da0024 100%);
+	-webkit-app-region: drag;
+}
+
+.header .content {
+	top: 150px;
+}
+
+.header h1 {
+	padding: 50px 80px 60px;
+	color: white;
+	font-weight: 300;
+}
+
+.list .content {
+	position: relative;
+}
