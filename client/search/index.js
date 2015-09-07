@@ -76,10 +76,14 @@ riot.tag('search', html.search, function (ctx) {
   }
 
   this.triggerSearch = _.throttle(function (query) {
-    self.defineSuggestion('– No Results')
-    client.request('search', {query: query}, function (err, results) {
-      var show = results ? 'expand' : 'shrink'
-      client.request(show)
+    client.request('search', {query: query}, function (err, groups) {
+      if (_.isEmpty(groups)) {
+        client.request('shrink')
+        self.defineSuggestion('– No Results')
+      } else {
+        client.request('expand')
+        self.defineSuggestion()
+      }
       if (err) return console.log(err)
     })
   }, 300)
@@ -112,9 +116,9 @@ riot.tag('list', html.list, function (ctx) {
   var self = this
   this.groups = []
 
-  this.handleRequest = function (err, result) {
-    if (err || !result) return console.log(err)
-    self.groups = result.groups
+  this.handleRequest = function (err, groups) {
+    if (err) return console.log(err)
+    self.groups = groups
     // self.groups[0].children[0].highlighted = true
     self.update()
   }
@@ -176,10 +180,10 @@ riot.tag('list', html.list, function (ctx) {
 riot.tag('view', html.view, function (ctx) {
   var self = this
 
-  this.handleRequest = _.throttle(function (err, res) {
+  this.handleRequest = _.throttle(function (err, groups) {
     if (err) return console.log(err)
-    if (_.isEmpty(res.groups)) return console.log('no content found')
-    self.showItem(res.groups[0].children[0])
+    if (_.isEmpty(groups)) return console.log('no content found')
+    self.showItem(groups[0].children[0])
   }, 300)
 
   this.handleLinkClick = function (evt) {
