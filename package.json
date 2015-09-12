@@ -28,6 +28,7 @@
     "lodash": "^3.10.1",
     "mdfind": "0.1.0",
     "natural": "^0.2.1",
+    "npm": "^2.14.2",
     "npm-module-search": "^1.0.0",
     "os-locale": "^1.1.0",
     "python-runner": "^1.1.0",

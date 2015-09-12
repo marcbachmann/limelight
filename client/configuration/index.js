@@ -56,7 +56,7 @@ riot.tag('list-plugins', html.list, function (ctx) {
 
   this.route.on('show', function () {
     client.request('plugins', function (err, plugins) {
-      if (err) return console.log(err)
+      if (err) return console.error(err.stack)
       self.update({plugins: plugins})
     })
   })
