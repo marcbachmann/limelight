@@ -2,7 +2,7 @@ var util = require('util')
 var path = require('path')
 var express = require('express')
 var BaseWindow = require('./base_window')
-// var plugins = require('../lib/plugins-loader')
+var PluginCollection = require('../lib/plugins-loader')
 
 function ConfigurationWindow () {
   BaseWindow.call(this, {frame: false, width: 800, height: 620, 'hide-on-blur': false, navigation: './configuration_window_menu'})
@@ -19,9 +19,10 @@ ConfigurationWindow.prototype.startServer = function (callback) {
   app.get('/plugins', function (req, res) { res.send('search') })
   app.get('/plugins/:plugin', function (req, res) {res.send('plugin: ' + req.params.plugin)})
   app.get('/plugins/:plugin/config', function (req, res) {res.send('config')})
-  // self.client.on('plugins', function (req, next) {
-  //   plugins.list(next)
-  // })
+  self.client.on('plugins', function (req, next) {
+    var plugins = new PluginCollection()
+    plugins.loadAll(path.join(__dirname, '../plugins'), next)
+  })
 
   this.server = app.listen(0, function (err) {
     if (err) return callback(err)
