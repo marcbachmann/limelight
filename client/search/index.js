@@ -19,6 +19,11 @@ client.on('dom-ready', function () {
     }
   })
 
+  // Capture drop event
+  document.addEventListener('drop', function (evt) {
+    evt.preventDefault()
+  })
+
   // Disable Pinch Zoom
   document.addEventListener('mousewheel', function (evt) {
     if (evt.ctrlKey) {
@@ -97,7 +102,7 @@ riot.tag('search', html.search, function (ctx) {
   }
 
   this.onKeydown = function (evt) {
-    if (event.keyCode === 13) {
+    if (evt.keyCode === 13) {
       itc.emit('list-run-item', evt)
     }
     return true
