@@ -5,7 +5,7 @@ module.exports = {
     callback(null, {name: 'Utilities', children: [{name: 'Toggle dark mode', plugin: 'dark-mode'}]})
   },
 
-  get: function (query, callback) {
+  get: function (item, query, callback) {
     darkMode.isDark(function (err, isDark) {
       if (err) return callback(err)
       var type = isDark? 'dark': 'light'
@@ -13,7 +13,7 @@ module.exports = {
     })
   },
 
-  run: function (query, callback) {
+  run: function (item, query, callback) {
     darkMode.toggle(null, callback)
   }
 }

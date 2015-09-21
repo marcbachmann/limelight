@@ -17,11 +17,11 @@ module.exports = {
     })
   },
 
-  get: function (query, callback) {
+  get: function (item, query, callback) {
 
   },
 
-  run: function (query, callback) {
+  run: function (item, query, callback) {
 
   }
 }

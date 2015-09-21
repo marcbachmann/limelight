@@ -1,5 +1,8 @@
 var mdfind = require('../../lib/find')
 var _ = require('lodash')
+var fs = require('fs')
+var path = require('path')
+var html = fs.readFileSync(path.join(__dirname, 'show.html'), 'utf8')
 
 module.exports = {
   list: function (query, callback) {
@@ -19,11 +22,15 @@ module.exports = {
     })
   },
 
-  get: function (query, callback) {
-      callback(null, {html: query})
+  get: function (item, query, callback) {
+    page = html
+      .replace('{{feature.name}}', item.plugin)
+      .replace('{{feature.description}}', '')
+      .replace('{{feature.icon}}', 'Google Chrome.app' + '/Contents/Resources/app.icns')
+    callback(null, {html: page})
   },
 
-  run: function (query, callback) {
+  run: function (item, query, callback) {
 
   }
 }

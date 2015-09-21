@@ -36,7 +36,8 @@ SearchWindow.prototype.startServer = function (callback) {
   self.client.on('search', function (req, callback) { self.search(req, callback) })
   app.get('/plugins/:plugin', function (req, res) {
     var query = JSON.parse(req.query.query)
-    self.plugins.get(req.params.plugin, query, function (err, response) {
+    var item = {plugin: req.params.plugin}
+    self.plugins.get(item, query, function (err, response) {
       if (err) return res.status(500).send(err.stack)
       if (!response) return res.sendStatus(404)
       res.set('content-type', 'text/html')
@@ -46,7 +47,7 @@ SearchWindow.prototype.startServer = function (callback) {
 
   self.client.on('run', function (req, callback) {
     console.log(JSON.stringify(req))
-    self.plugins.run(req.body.item.plugin, req.body.item.query, callback)
+    self.plugins.run(req.body.item, req.body.item.query, callback)
   })
 
   app.use('/plugins/', express.static(path.join(__dirname, '../plugins')))

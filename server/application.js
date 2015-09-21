@@ -16,7 +16,7 @@ function Application () {
 Application.prototype.start = function (callback) {
   var self = this
 
-  config.updateConfig(function (err) {
+  config.update(function (err) {
     if (err) console.error(err)
     start.call(self)
   })
@@ -39,7 +39,7 @@ Application.prototype.start = function (callback) {
       self.configuration.show()
     })
 
-    globalShortcut.register(config.current.shortcut, function () { self.search.toggleWindow() })
+    globalShortcut.register(config.shortcut, function () { self.search.toggleWindow() })
     this.configuration.start(function () {
       self.search.start(function (err) {
         if (err) return console.error(err)
@@ -61,7 +61,7 @@ Application.prototype.stop = function (callback) {
   callback = callback || function stopCallback (err) { if (err) throw err }
 
   var self = this
-  globalShortcut.unregister(config.current.shortcut)
+  globalShortcut.unregister(config.shortcut)
   this.search.stop(function (err) {
     if (err) return callback(err)
     self.configuration.stop(callback)
